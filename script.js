@@ -4,6 +4,11 @@ let randomNumber = Math.floor(Math.random() * 100) + 1;
 // Jumlah percobaan
 let attempts = 0;
 
+// LOOP
+for (let i = 0; i < 1; i++) {
+    console.log("Game aktif");
+}
+
 // Mengambil elemen HTML
 const guessInput = document.getElementById("guessInput");
 const guessBtn = document.getElementById("guessBtn");
