@@ -1,1 +1,0 @@
-# Game-Sederhana_Tebak-Angka
