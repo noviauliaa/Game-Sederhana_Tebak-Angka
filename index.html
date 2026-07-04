@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Tebak Angka</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🎯 Game Tebak Angka</h1>
+            <p>Komputer telah memilih sebuah angka dari <strong>1 - 100</strong>.</p>
+            <p>Coba tebak angka tersebut!</p>
+        </header>
+
+        <main>
+
+            <section class="input-area">
+                <input
+                    type="number"
+                    id="guessInput"
+                    placeholder="Masukkan angka..."
+                    min="1"
+                    max="100"
+                >
+
+                <button id="guessBtn">
+                    Tebak
+                </button>
+            </section>
+                 
+            <section class="message-area">
+               <h2>Hasil</h2>
+                </br>
+                <p id="message">
+                    Menunggu tebakan...
+                </p>
+            </section>
+
+            <section class="info-area">
+
+                <div class="info-box">
+                    <h3>Jumlah Percobaan</h3>
+                    <p id="attempts">0</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Skor Terbaik</h3>
+                    <p id="bestScore">-</p>
+                </div>
+
+            </section>
+
+            <section class="restart-area">
+                <button id="restartBtn">
+                    🔄 Main Lagi
+                </button>
+            </section>
+
+            <section class="rules">
+
+                <h2>Cara Bermain</h2></br>
+
+                <ul>
+                    <li>Masukkan angka dari <strong>1 - 100</strong>.</li>
+                    <li>Klik tombol <strong>Tebak</strong>.</li>
+                    <li>Jika angka terlalu kecil atau terlalu besar, akan muncul petunjuk.</li>
+                    <li>Terus menebak sampai menemukan angka yang benar.</li>
+                    <li>Klik <strong>Main Lagi</strong> untuk memulai permainan baru.</li>
+                </ul>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
