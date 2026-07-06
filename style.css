@@ -1,0 +1,579 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+
+    background:linear-gradient(
+        180deg,
+        #8d7cff 100%
+    );
+
+    position:relative;
+}
+
+/* ========================= */
+/* BLOB */
+/* ========================= */
+
+.blob{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(20px);
+
+    opacity:.25;
+
+}
+
+.blob1{
+
+    width:250px;
+    height:250px;
+
+    left:-70px;
+    bottom:-70px;
+
+    background:#49d6ff;
+
+}
+
+.blob2{
+
+    width:220px;
+    height:220px;
+
+    right:-60px;
+    bottom:-60px;
+
+    background:#ff5bd7;
+
+}
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.container{
+
+    position:relative;
+    z-index:5;
+
+    width:100%;
+    max-width:760px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:35px;
+
+    padding:40px;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.25);
+
+    animation:
+    fadeUp .8s ease;
+
+}
+
+header{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+header h1{
+
+    font-size:2.3rem;
+
+    color:#5b47d7;
+
+    margin-bottom:10px;
+
+}
+
+header p{
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+/* ========================= */
+/* INPUT */
+/* ========================= */
+
+.input-area{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+}
+
+.input-area input{
+
+    flex:1;
+
+    padding:17px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#eef2ff;
+
+    font-size:17px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.input-area input:focus{
+
+    background:white;
+
+    box-shadow:
+    0 0 0 3px rgba(109,97,240,.25);
+
+}
+
+.input-area button{
+
+    padding:17px 30px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    background:
+    linear-gradient(
+    135deg,
+    #7d5fff,
+    #5b47d7);
+
+    transition:.3s;
+
+}
+
+.input-area button:hover{
+
+    transform:
+    translateY(-4px);
+
+    box-shadow:
+    0 12px 25px rgba(91,71,215,.35);
+
+}
+
+/* ========================= */
+/* HASIL */
+/* ========================= */
+
+.message-area{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.message-area:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.message-area h2{
+
+    color:#5b47d7;
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+#message{
+
+    font-size:20px;
+
+    font-weight:600;
+
+    color:#444;
+
+    line-height:1.6;
+
+    animation:fadeMessage .4s;
+
+}
+
+/* ========================= */
+/* INFO BOX */
+/* ========================= */
+
+.info-area{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-bottom:30px;
+
+}
+
+.info-box{
+
+    flex:1;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    color:white;
+
+}
+
+.info-box:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.info-box.blue{
+
+    background:
+    linear-gradient(
+    135deg,
+    #4facfe,
+    #00c6fb);
+
+}
+
+.info-box.yellow{
+
+    background:
+    linear-gradient(
+    135deg,
+    #ffd54f,
+    #ff9800);
+
+}
+
+.info-box h3{
+
+    font-size:18px;
+
+    margin-bottom:12px;
+
+}
+
+.info-box p{
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+/* ========================= */
+/* RESTART */
+/* ========================= */
+
+.restart-area{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+#restartBtn{
+
+    padding:16px 35px;
+
+    border:none;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ff5f9e,
+    #ff3d7f);
+
+    transition:.3s;
+
+}
+
+#restartBtn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 12px 25px rgba(255,61,127,.35);
+
+}
+
+#restartBtn:active{
+
+    transform:scale(.96);
+
+}
+
+/* ========================= */
+/* RULES */
+/* ========================= */
+
+.rules{
+
+    background:#f7f8ff;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.06);
+
+}
+
+.rules h2{
+
+    color:#5b47d7;
+
+    margin-bottom:15px;
+
+}
+
+.rules ul{
+
+    padding-left:20px;
+
+}
+
+.rules li{
+
+    margin-bottom:12px;
+
+    color:#555;
+
+    line-height:1.7;
+
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width:768px){
+
+    body{
+        padding:20px;
+    }
+
+    .container{
+        padding:25px;
+    }
+
+    .input-area{
+        flex-direction:column;
+    }
+
+    .info-area{
+        flex-direction:column;
+    }
+
+    .input-area button,
+    #restartBtn{
+        width:100%;
+    }
+
+}
+
+/* ========================= */
+/* ANIMASI */
+/* ========================= */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes fadeMessage{
+
+    from{
+        opacity:0;
+        transform:scale(.85);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+/* ========================= */
+/* EFEK TAMBAHAN */
+/* ========================= */
+
+.container::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    background:rgba(255,255,255,.25);
+
+    border-radius:50%;
+
+    top:-120px;
+    right:-120px;
+
+    filter:blur(40px);
+
+}
+
+.container::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    background:rgba(255,255,255,.15);
+
+    border-radius:50%;
+
+    bottom:-80px;
+    left:-80px;
+
+    filter:blur(30px);
+
+}
+
+.input-area button,
+#restartBtn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.input-area button::before,
+#restartBtn::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:40px;
+    height:200%;
+
+    background:rgba(255,255,255,.35);
+
+    top:-50%;
+
+    left:-80px;
+
+    transform:rotate(25deg);
+
+    transition:.8s;
+
+}
+
+.input-area button:hover::before,
+#restartBtn:hover::before{
+
+    left:140%;
+
+}
+
+.info-box{
+
+    animation:fadeUp .8s ease;
+
+}
+
+.message-area{
+
+    animation:fadeUp 1s ease;
+
+}
+
+.rules{
+
+    animation:fadeUp 1.2s ease;
+
+}
